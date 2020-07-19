@@ -17,5 +17,5 @@ export class easyJwt extends initRes {
   constructor(key: string, salt: string, isNeedUrlEncode: boolean): initRes;
 }
 
-export function encrypt(opt: opt, data: object, dataOptions = [], options = []): string | boolean {}
-export function decrypt(opt: opt, string: string): object | boolean {}
+export function encrypt(opt: opt, data: object, dataOptions = [], options = []): string | boolean;
+export function decrypt(opt: opt, string: string): object | boolean;
