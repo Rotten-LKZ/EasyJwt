@@ -42,6 +42,9 @@ console.log(jwt.decrypt(jwtString));
 
 # Release notes
 
+### 0.4.0
+Opening the API.
+
 ### 0.3.0
 Supporting encrypt.
 
