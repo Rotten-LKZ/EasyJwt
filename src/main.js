@@ -11,11 +11,12 @@ exports.encrypt = function(key, data = [], dataOptions = [], options = []) {
   for(var i in dataOptions) {
     data.push(dataOptions[i]);
   }
-  let payload = encodeURIComponent(aes.encryption(key, data));
-  let signature = sha256(header + payload + salt);
+  let payload = aes.encryption(key, data);
+  let signature = sha256(header + payload + salt).toString();
   return header + '.' + payload + '.' + signature;
 }
 
 exports.decrypt = function(key, string) {
-
+  let jwts = string.split('.');
+  
 }
