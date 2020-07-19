@@ -4,7 +4,8 @@
   "description": "A JWT library that is simple to use.",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "tsc && node app.js"
   },
   "repository": {
     "type": "git",
@@ -18,5 +19,8 @@
   "bugs": {
     "url": "https://github.com/Rotten-LKZ/EasyJwt/issues"
   },
-  "homepage": "https://github.com/Rotten-LKZ/EasyJwt#readme"
+  "homepage": "https://github.com/Rotten-LKZ/EasyJwt#readme",
+  "dependencies": {
+    "crypto-js": "^4.0.0"
+  }
 }
