@@ -5,5 +5,6 @@ A JWT library that is easy to use.
 1. Automatically determine when it expires.
 2. Easy to use.
 3. Don't need to do a lot of configuration.
+4. Distinguish between data and JWT's configuration (such as iss, sub, aud, exp, nbf, iat, jti).
 
 # Usage

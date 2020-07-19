@@ -14,12 +14,8 @@ function init(key) {
     }
   }
 
-  this.encrypt = (data) => {
-    main.encrypt(key, data);
-  }
-
-  this.encrypt = (data, option) => {
-    main.encrypt(key, data, option);
+  this.encrypt = (data, dataOptions = [], options = []) => {
+    main.encrypt(key, data, dataOptions, options);
   }
 
   this.decrypt = (string) => {
@@ -27,5 +23,7 @@ function init(key) {
   }
 }
 
-let initV = new init().isSupportCrypto ? init : false;
-module.exports = initV;
+console.log(new init('test').encrypt({'test' : 'test'}));
+
+// let initV = new init().isSupportCrypto ? init : false;
+// module.exports = initV;
