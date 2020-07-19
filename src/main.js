@@ -4,9 +4,8 @@ const aes = require('./lib/aes');
 const base64 = require('./lib/base64');
 const sha256 = require('crypto-js/sha256');
 
-let salt = '1W6IjQPY0GBJpv';
 
-exports.encrypt = function(key, data = [], dataOptions = [], options = []) {
+exports.encrypt = function(key, data = [], dataOptions = [], options = [], salt) {
   let header = base64.encode({'typ': 'JWT', 'alg': 'AES'});
   for(var i in dataOptions) {
     data.push(dataOptions[i]);
@@ -16,7 +15,7 @@ exports.encrypt = function(key, data = [], dataOptions = [], options = []) {
   return header + '.' + payload + '.' + signature;
 }
 
-exports.decrypt = function(key, string) {
+exports.decrypt = function(key, string, salt) {
   let jwts = string.split('.');
-  
+
 }

@@ -1,18 +1,16 @@
 
 const main = require('./main');
 
-function init(key) {
+function init(key, salt, isNeedUrlEncode) {
   this.key = key;
 
   this.encrypt = (data, dataOptions = [], options = []) => {
-    return main.encrypt(key, data, dataOptions, options);
+    return main.encrypt(key, data, dataOptions, options, salt);
   }
 
   this.decrypt = (string) => {
-    return main.decrypt(key, string);
+    return main.decrypt(key, string, salt);
   }
 }
 
-console.log(new init('test').encrypt({'test' : 'test'}));
-
-// module.exports = init;
+module.exports = init;
