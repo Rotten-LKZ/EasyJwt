@@ -44,6 +44,7 @@ console.log(jwt.decrypt(jwtString));
 
 ### 0.3.0
 Supporting encrypt.
+
 Will update decrypt.
 
 ### 0.2.0
