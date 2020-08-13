@@ -16,6 +16,9 @@ A JWT library that is easy to use.
 # Matters Need Attention
 1. JWT's configuration is time dependent (such as exp, nbf, iat), please use ten-place timestamp
 
+# The author want to say
+1. The decrypt maybe need more time to complete. (Because I am a lazy author)
+
 # Usage
 
 Install easy-jwt
@@ -38,7 +41,7 @@ let jwt = new ins.easyJwt(key, salt, false); // Jwt(key, salt, isNeedUrlEncode);
 console.log(jwt.encrypt({ "test": "Test" }, { 'iss': 'admin' })) // 
 
 // If this statement return false that is a wrong key or time out.
-console.log(jwt.decrypt(jwtString));
+// console.log(jwt.decrypt(jwtString));
 ```
 
 # API

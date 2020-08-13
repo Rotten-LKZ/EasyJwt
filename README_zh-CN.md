@@ -16,6 +16,9 @@
 # 注意事项
 1. JWT配置里面跟时间有关的部分 (比如 exp, nbf, iat), 请使用十位时间戳
 
+# 作者想说
+1. 解密功能可能需要更多时间完成 (因为我是个懒骨头)
+
 # 用法
 
 安装 easy-jwt
@@ -38,7 +41,7 @@ let jwt = new ins.easyJwt(key, salt, false); // Jwt(key, salt, isNeedUrlEncode) 
 console.log(jwt.encrypt({ "test": "Test" }, { 'iss': 'admin' })) // 
 
 // 如果这句返回false 则配置等出错或者超时
-console.log(jwt.decrypt(jwtString));
+// console.log(jwt.decrypt(jwtString));
 ```
 
 # API
