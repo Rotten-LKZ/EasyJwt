@@ -1,5 +1,5 @@
 # 其它语言的README文件
-[英语 English](https://github.com/Rotten-LKZ/EasyJwt#description)
+[英语 English](https://github.com/Rotten-LKZ/EasyJwt#the-readme-of-other-language)
 
 # 描述
 一个简单易用的JWT库
