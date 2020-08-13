@@ -1,5 +1,5 @@
 # The README of other language
-[Simplified Chinese 简体中文]()
+[Simplified Chinese 简体中文](https://github.com/Rotten-LKZ/EasyJwt/blob/master/README_zh-CN.md)
 
 # Description
 A JWT library that is easy to use.
