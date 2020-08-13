@@ -1,3 +1,6 @@
+# The README of other language
+[Simplified Chinese 简体中文]()
+
 # Description
 A JWT library that is easy to use.
 
@@ -10,6 +13,9 @@ A JWT library that is easy to use.
 # Defect
 1. This library is using AES encrypt instead of HS256 and RS256 because author don't know how to use HS256 and RS256.
 
+# Matters Need Attention
+1. JWT's configuration is time dependent (such as exp, nbf, iat), please use ten-place timestamp
+
 # Usage
 
 Install easy-jwt
@@ -21,16 +27,16 @@ or use yarn
 > yarn add easy-jwt
 
 ```javascript
-import Jwt from 'easy-jwt';
 
 let key = 'Xjsiefd'; // Your secret key
 let salt = 'Jbxidfw'; // Your salt (will use it in the JWT's part three(signature))
 
-let jwt = new Jwt(key, salt, false); // Jwt(key, salt, isNeedUrlEncode);
+// import Jwt from 'easy-jwt';
+var ins = require('easy-jwt');
+let jwt = new ins.easyJwt(key, salt, false); // Jwt(key, salt, isNeedUrlEncode);
 
-let jwtString = jwt.encrypt({'user': 'test'}, {'iss': 'admin'})); // encrypt JWT
+console.log(jwt.encrypt({ "test": "Test" }, { 'iss': 'admin' })) // 
 
-console.log(jwtString);
 // If this statement return false that is a wrong key or time out.
 console.log(jwt.decrypt(jwtString));
 ```
